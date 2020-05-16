@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zumo/models/routes.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -45,7 +46,7 @@ class Login extends StatelessWidget {
               child: RaisedButton(
                   child: Text('Enter'),
                   onPressed: () {
-                    debugPrint('Login click');
+                    Navigator.pushReplacementNamed(context, Routes.dashboard);
                   }),
             ),
           ],
