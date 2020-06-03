@@ -9,7 +9,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: loggedInAppBar(),
+      appBar: loggedInAppBar('Zumo'),
       drawer: NavigationDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

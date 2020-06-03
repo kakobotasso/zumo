@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-loggedInAppBar() {
+loggedInAppBar(String title) {
   return AppBar(
-    title: Text('Zumo'),
+    title: Text(title),
     actions: <Widget>[
       IconButton(
         icon: Icon(Icons.notifications_none),

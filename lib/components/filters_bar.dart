@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zumo/components/filter_checkbox.dart';
 import 'package:zumo/components/filter_tag.dart';
+import 'package:zumo/models/routes.dart';
 
 class FiltersBar extends StatelessWidget {
   @override
@@ -84,6 +85,7 @@ class FiltersBar extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.of(context).pop();
+                Navigator.pushNamed(context, Routes.filterResults);
               },
             ),
           ],

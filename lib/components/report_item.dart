@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zumo/models/arguments/report_arguments.dart';
+import 'package:zumo/models/routes.dart';
 
 class ReportItem extends StatelessWidget {
   final String title;
@@ -27,7 +29,14 @@ class ReportItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: () => debugPrint('item click'),
+        onTap: () {
+          Navigator.pushNamed(context, Routes.reportDetail,
+              arguments: ReportArguments(
+                title: title,
+                pdfLink:
+                    'https://firebasestorage.googleapis.com/v0/b/zumo-8ef0f.appspot.com/o/sample.pdf?alt=media&token=942d1873-465b-40dd-86ec-164026eb9190',
+              ));
+        },
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
